@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products and the shopping cart</title>
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <!-- font awesome kit -->
+  <script src="https://kit.fontawesome.com/417854e63b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav id="nav-bar" class="navbar navbar-dark bg-dark">
+      <!-- Navbar content -->
+      <div class="container-fluid">
+        <a class="navbar-brand">Md. Nayem Hossain</a>
+
+        <div id="shopping-cart"></div>
+      </div>
+    </nav>
+  </header>
+  <section class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2 class="mt-5 border-bottom p-2">Product List</h2>
+        <div id="product-container" class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Product items will be dynamically added here -->
+        </div>
+      </div>
+      <div class="col-lg-4 border border-1">
+        <div class="container mt-5">
+          <div class="d-flex justify-content-between mb-3">
+            <h2>Shopping Cart</h2>
+            <button onclick="handleClearCart()" class="btn btn-outline-warning rounded-pill px-3 fw-bolder">
+              Clear Cart
+            </button>
+          </div>
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th class="text-center">Remove</th>
+              </tr>
+            </thead>
+            <tbody id="cart-container">
+              <!-- Cart items will be dynamically added here -->
+              
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Total Amount :</td>
+                <td></td>
+                <td><span id="total-cart-amount"></span></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- bootstrap js delivr -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- js file -->
+  <script type="module" src="/app.js"></script>
+  <script type="module" src="/product.js"></script>
+  <script type="module" src="/cart.js"></script>
+</body>
+
+</html>
